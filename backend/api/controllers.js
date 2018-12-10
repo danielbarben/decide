@@ -47,7 +47,6 @@ const saveStatistics = (req,res) => {
 };
 const countItems = (req, res) => {
     const keyword = req.params.item
-    //console.log(keyword)
     db.models.Statistics.findAndCountAll({
         where: {
            item: keyword
@@ -57,11 +56,7 @@ const countItems = (req, res) => {
         console.log(item.count)
         item === null ? res.status(404).send([]) : res.send([item.count])
     })
-    //console.log(result.count);
-    //console.log(result.rows);
-     //});
 };
-
 
 module.exports = {
     homeRoute,

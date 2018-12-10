@@ -103,7 +103,6 @@ const Statistics = sequelize.define('statistics', {
 }, //{ force: true }
 )
 
-
 Projects.hasMany(Questions);
 Questions.hasMany(Answers);
 
