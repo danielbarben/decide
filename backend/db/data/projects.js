@@ -7,10 +7,10 @@ module.exports = [{
 },
 {
   id:2,
-  name: "Ferienplaner",
-  bot: "Hans",
+  name: "Drei Nüsse für Aschenbrödel",
+  bot: "Herbert",
   description: "So place seed you sea heaven lesser moveth dry one.",
-  firstQuestion:10
+  firstQuestion:15
 },
 {
   id:3,

@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const dbURL = `postgres://sabgaefn:iwuBcWa8aIQnIv09mGHFzWdUQn5zZHX8@manny.db.elephantsql.com:5432/sabgaefn`;
-
 const sequelize = new Sequelize(dbURL);
 
+//Models
 const Projects = sequelize.define('projects', {
     id: {
         type: Sequelize.INTEGER,
@@ -62,11 +62,11 @@ const Answers = sequelize.define('answers', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    con: {
+    /*con: {
       type: Sequelize.STRING,
       allowNull: false
-  },
-}, //{ force: true }
+  },*/
+}//, { force: true }
 )
 
 const Conclusions = sequelize.define('conclusions', {
@@ -103,6 +103,7 @@ const Statistics = sequelize.define('statistics', {
 }, //{ force: true }
 )
 
+// relations
 Projects.hasMany(Questions);
 Questions.hasMany(Answers);
 
