@@ -29,7 +29,7 @@ const findFirstQuestion = (req, res) => {
     db.models.Projects
     .findById(projectId, {include: [{
         model: db.models.Questions}], order: [
-            [db.models.Questions, 'id', 'asc']
+            [db.models.Questions, 'id', 'asc'] //,attributed : ['id']
           ]
     })
     .then(projects => {

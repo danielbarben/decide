@@ -21,8 +21,9 @@ const Projects = sequelize.define('projects', {
         type: Sequelize.TEXT,
         allowNull: false
     },
-    firstQuestion: {
-      type: Sequelize.STRING,
+    autor: {
+      type: Sequelize.TEXT,
+      allowNull: false
     }
 }, //{ force: true }
 )
@@ -62,10 +63,6 @@ const Answers = sequelize.define('answers', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    /*con: {
-      type: Sequelize.STRING,
-      allowNull: false
-  },*/
 }//, { force: true }
 )
 
