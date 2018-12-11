@@ -28,8 +28,9 @@ const findFirstQuestion = (req, res) => {
     const projectId = req.params.projectId
     db.models.Projects
     .findById(projectId, {include: [{
-        model: db.models.Questions
-        }]
+        model: db.models.Questions}], order: [
+            [db.models.Questions, 'id', 'asc']
+          ]
     })
     .then(projects => {
         res.status(200).send(projects.questions[0]);
