@@ -69,6 +69,19 @@ const countItems = (req, res) => {
     })
 };
 
+const findConclusionByProject = (req, res) => {
+    const projectId = req.params.projectId
+    db.models.Conclusions
+    .findAll({where: {
+        projectId : projectId
+    }
+})
+    .then(projects => {
+        const tmp = projects.map((item, index) => {return item.title})
+        res.status(200).send(tmp);
+    })
+};
+
 module.exports = {
     homeRoute,
     findAllProjects,
@@ -76,5 +89,6 @@ module.exports = {
     findQuestionById,
     findConclusionById,
     saveStatistics,
-    countItems
+    countItems,
+    findConclusionByProject
 }

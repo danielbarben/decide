@@ -1,6 +1,8 @@
 module.exports = [{
-  item: "Maria"
+  item: "Maria",
+  projectId: 1
 },
 {
   item: "Josef", 
+  projectId:1
 }];

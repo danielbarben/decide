@@ -24,7 +24,7 @@ const Projects = sequelize.define('projects', {
     firstQuestion: {
       type: Sequelize.STRING,
     }
-}//, { force: true }
+}, //{ force: true }
 )
 
 const Questions = sequelize.define('questions', {
@@ -86,7 +86,12 @@ const Conclusions = sequelize.define('conclusions', {
   twittertext: {
       type: Sequelize.STRING,
       allowNull: false
+    },
+    projectId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
     }
+
 }, //{ force: true }
 )
 

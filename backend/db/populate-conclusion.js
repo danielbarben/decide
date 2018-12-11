@@ -6,7 +6,8 @@ db.conn.sync().then(() => {
         db.models.Conclusions.create({
             title: conclusion.title,
             conclusion: conclusion.conclusion,
-            twittertext: conclusion.twittertext
+            twittertext: conclusion.twittertext,
+            projectId: conclusion.projectId
         })
     })
 });
