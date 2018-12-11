@@ -29,8 +29,7 @@ const findFirstQuestion = (req, res) => {
     db.models.Projects
     .findById(projectId, {include: [{
         model: db.models.Questions}], order: [
-            [db.models.Questions, 'id', 'asc'] //,attributed : ['id']
-          ]
+            [db.models.Questions, 'id', 'asc']]         
     })
     .then(projects => {
         res.status(200).send(projects.questions[0]);
@@ -68,6 +67,7 @@ const saveStatistics = (req,res) => {
         })
     }
 };
+/*
 const countItems = (req, res) => {
     const keyword = req.params.item
     db.models.Statistics.findAndCountAll({
@@ -80,7 +80,7 @@ const countItems = (req, res) => {
         item === null ? res.status(404).send([]) : res.send([item.count])
     })
 };
-
+*/
 const findConclusionByProject = (req, res) => {
     const projectId = req.params.projectId
     db.models.Conclusions
@@ -91,6 +91,38 @@ const findConclusionByProject = (req, res) => {
     .then(projects => {
         const tmp = projects.map((item, index) => {return item.title})
         res.status(200).send(tmp);
+    })
+};
+
+const countItems = (req, res) => {
+    const projectId = req.params.projectId
+    db.models.Conclusions
+    .findAll({where: {
+        projectId : projectId
+    }
+})
+    .then(projects => {
+        const tmp = projects.map((item, index) => {return item.title})
+        const countresult = [];
+        counter = 0;
+        for (el of tmp) {
+            db.models.Statistics.findAndCountAll({
+                where: {
+                   item: el
+                }
+            })
+            .then(cn => {
+                console.log(cn)
+                countresult.push([cn.count])
+                counter ++
+                if (counter === tmp.length) {
+                    let resultToSend = [];
+                    for (index in tmp) {
+                        resultToSend.push([tmp[index], countresult[index]])
+                    }
+                    res.status(200).send(resultToSend)}
+            })
+        }
     })
 };
 
