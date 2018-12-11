@@ -1,0 +1,492 @@
+[
+
+            {
+                "id": 1,
+                "projectId": 1,
+                //"question": "Hallo, ich bin Sanja. Ich sage Dir, welche Rolle Du im Krippenspiel spielst. Leidest Du an Rückenproblemen?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 1,
+                        //"answer": "Ja.",
+                        "questionId": 1,
+                        "nxt": "4",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 2,
+                        //"answer": "Manchmal.",
+                        "questionId": 1,
+                        "nxt": "4",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 3,
+                        //"answer": "Das geht niemanden etwas an.",
+                        "questionId": 1,
+                        "nxt": "3",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 4,
+                        //"answer": "Nein.",
+                        "questionId": 1,
+                        "nxt": "2",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "projectId": 1,
+                //"question": "Du wirst von einem Eiligen auf der Rolltreppe unsanft zur Seite gedrängt. Wie reagierst Du?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 5,
+                        //"answer": "Ich zitiere Schopenhauer: «Der vollkommene Weltmann wäre der, welcher nie in Unschlüssigkeit stockte und nie in Übereilung geriete.»",
+                        "questionId": 2,
+                        "nxt": "8",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 6,
+                        //"answer": "Gar nicht.",
+                        "questionId": 2,
+                        "nxt": "8",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 7,
+                        //"answer": "Ich entschuldige mich und trete zur Seite.",
+                        "questionId": 2,
+                        "nxt": "9",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "projectId": 1,
+                //"question": "Warum so störrisch?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 8,
+                        "answer": "Weiss nicht.",
+                        "questionId": 3,
+                        "nxt": "7",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 9,
+                        "answer": "Darum!",
+                        "questionId": 3,
+                        "nxt": "0",
+                        "con": "6",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "projectId": 1,
+                //"question": "Was trifft am ehesten auf Dich zu?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 10,
+                        //"answer": "Für geliebte Menschen tue ich alles, ich stelle mich gern hinten an.",
+                        "questionId": 4,
+                        "nxt": "5",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 11,
+                        //"answer": "Ich stehe gern im Mittelpunkt.",
+                        "questionId": 4,
+                        "nxt": "6",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 12,
+                        //"answer": "Wenn ich an etwas glaube, kann ich sehr überzeugend sein.",
+                        "questionId": 4,
+                        "nxt": "6",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "projectId": 1,
+                //"question": "Haderst Du manchmal mit Deinem Schicksal?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 13,
+                        //"answer": "Nein, alles passiert aus gutem Grund.",
+                        "questionId": 5,
+                        "nxt": "10",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 14,
+                        //"answer": "Ja, aber das Leben ist halt nun mal kein Bonbon.",
+                        "questionId": 5,
+                        "nxt": "11",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "projectId": 1,
+                //"question": "Wie reagierst Du, wenn Dir jemand nicht gut gesinnt ist?",
+                "createdAt": "2018-12-10T10:14:22.689Z",
+                "updatedAt": "2018-12-10T10:14:22.689Z",
+                "answers": [
+                    {
+                        "id": 15,
+                        //"answer": "Mir sind alle gut gesinnt.",
+                        "questionId": 6,
+                        "nxt": "5",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 16,
+                        //"answer": "Ich ignoriere es.",
+                        "questionId": 6,
+                        "nxt": "11",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 17,
+                        //"answer": "Ich versuche, ihn von mir zu überzeugen. Meist gelingt das.",
+                        "questionId": 6,
+                        "nxt": "12",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 18,
+                        //"answer": "Liebe, Bruderliebe!",
+                        "questionId": 6,
+                        "nxt": "11",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 19,
+                        //"answer": "Ich bin beleidigt und rede nie wieder mit ihm.",
+                        "questionId": 6,
+                        "nxt": "0",
+                        "con": "5",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "projectId": 1,
+                //"question": "Welche Rolle übernimmst Du für gewöhnlich in einer Gruppe?",
+                "createdAt": "2018-12-10T10:14:22.701Z",
+                "updatedAt": "2018-12-10T10:14:22.701Z",
+                "answers": [
+                    {
+                        "id": 20,
+                        "answer": "Anführer",
+                        "questionId": 7,
+                        "nxt": "6",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 21,
+                        //"answer": "Vermittler",
+                        "questionId": 7,
+                        "nxt": "6",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 22,
+                        //"answer": "Mitläufer",
+                        "questionId": 7,
+                        "nxt": "8",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.238Z",
+                        "updatedAt": "2018-12-10T10:19:49.238Z"
+                    },
+                    {
+                        "id": 23,
+                        // "answer": "Ich bin der, der die Getränke mitbringt.",
+                        "questionId": 7,
+                        "nxt": "8",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.251Z",
+                        "updatedAt": "2018-12-10T10:19:49.251Z"
+                    }
+                    ////////////////////////////////////////////////////////////
+                    ////////////////////////////////////////////////////////////
+                    //anführer wie vermittler
+                ]
+            },
+            {
+                "id": 8,
+                "projectId": 1,
+                //"question": "Wie reist Du am liebsten?",
+                "createdAt": "2018-12-10T10:14:22.701Z",
+                "updatedAt": "2018-12-10T10:14:22.701Z",
+                "answers": [
+                    {
+                        "id": 24,
+                        //"answer": "Ich bevorzuge es, zu fliegen.",
+                        "questionId": 8,
+                        "nxt": "6",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.251Z",
+                        "updatedAt": "2018-12-10T10:19:49.251Z"
+                    },
+                    {
+                        "id": 25,
+                        //"answer": "Egal. Hauptsache, lange und weit.",
+                        "questionId": 8,
+                        "nxt": "13",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.251Z",
+                        "updatedAt": "2018-12-10T10:19:49.251Z"
+                    },
+                    {
+                        "id": 26,
+                        //"answer": "Zu Fuss",
+                        "questionId": 8,
+                        "nxt": "13",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "projectId": 1,
+                //"question": "Bist Du immer so lieb?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 27,
+                        //"answer": "Nein. Aber es bringt doch nichts, sich über solche Leute zu ärgern.",
+                        "questionId": 9,
+                        "nxt": "8",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 28,
+                        //"answer": "Ja.",
+                        "questionId": 9,
+                        "nxt": "14",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "projectId": 1,
+                //"question": "Ist Deine Lieblingsfarbe zufälligerweise Blau?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 29,
+                        //"answer": "Ja",
+                        "questionId": 10,
+                        "nxt": "0",
+                        "con": "1",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 30,
+                        //"answer": "Nein",
+                        "questionId": 10,
+                        "nxt": "11",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "projectId": 1,
+                //"question": "Du sitzt in gemütlicher Runde zusammen, als plötzlich das Licht erlischt. Es ist stockdunkel, und einige bekommen Angst. Was tust Du?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 31,
+                        //"answer": "Ich kümmere mich als Erstes um die Kinder.",
+                        "questionId": 11,
+                        "nxt": "0",
+                        "con": "1",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 32,
+                        //"answer": "Ich erzähle eine Geschichte über das Licht und die Dunkelheit. Es gibt da eine ganz schöne.",
+                        "questionId": 11,
+                        "nxt": "0",
+                        "con": "2",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 33,
+                        //"answer": "Ich zünde eine Kerze an.",
+                        "questionId": 11,
+                        "nxt": "0",
+                        "con": "3",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 34,
+                        //"answer": "Ich erzähle einen Witz.",
+                        "questionId": 11,
+                        "nxt": "12",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "projectId": 1,
+                //"question": "Wie hältst Du es mit der Pünktlichkeit?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 35,
+                        //"answer": "Lieber eine Stunde zu früh als eine Minute zu spät.",
+                        "questionId": 12,
+                        "nxt": "0",
+                        "con": "4",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 36,
+                        //"answer": "Wer zu spät kommt, hat mehr vom Chef.",
+                        "questionId": 12,
+                        "nxt": "0",
+                        "con": "5",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "projectId": 1,
+                //"question": "Wer trägt das Gepäck?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 37,
+                        //"answer": "Da finde ich schon jemanden.",
+                        "questionId": 13,
+                        "nxt": "0",
+                        "con": "7",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 38,
+                        //"answer": "Na, ich natürlich.",
+                        "questionId": 13,
+                        "nxt": "0",
+                        "con": "8",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "projectId": 1,
+                //"question": "Warum?",
+                "createdAt": "2018-12-10T10:14:22.702Z",
+                "updatedAt": "2018-12-10T10:14:22.702Z",
+                "answers": [
+                    {
+                        "id": 39,
+                        //"answer": "Weil die Letzten, äh, Netten die Ersten sein werden.",
+                        "questionId": 14,
+                        "nxt": "11",
+                        "con": "0",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    },
+                    {
+                        "id": 40,
+                        //"answer": "Weiss nicht.",
+                        "questionId": 14,
+                        "nxt": "0",
+                        "con": "9",
+                        "createdAt": "2018-12-10T10:19:49.252Z",
+                        "updatedAt": "2018-12-10T10:19:49.252Z"
+                    }
+                ]
+            }
+        ]
