@@ -118,7 +118,7 @@ const countItems = (req, res) => {
                 if (counter === tmp.length) {
                     let resultToSend = [];
                     for (index in tmp) {
-                        resultToSend.push([tmp[index], countresult[index]])
+                        resultToSend.push([countresult[index] + ': ' + tmp[index]])
                     }
                     res.status(200).send(resultToSend)}
             })
