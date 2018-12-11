@@ -24,6 +24,17 @@ const findProjectsById = (req, res) => {
         res.status(200).send(projects);
     })
 };
+const findFirstQuestion = (req, res) => {
+    const projectId = req.params.projectId
+    db.models.Projects
+    .findById(projectId, {include: [{
+        model: db.models.Questions
+        }]
+    })
+    .then(projects => {
+        res.status(200).send(projects.questions[0]);
+    })
+};
 const findQuestionById = (req, res) => {
     const questionId = req.params.questionId
     db.models.Questions
@@ -90,5 +101,6 @@ module.exports = {
     findConclusionById,
     saveStatistics,
     countItems,
-    findConclusionByProject
+    findConclusionByProject,
+    findFirstQuestion
 }
