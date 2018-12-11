@@ -5,7 +5,18 @@ const homeRoute = (req, res) => {
 }
 const findAllProjects = (req, res) => {
     db.models.Projects
-    .findAll({where: {id: '1'}, include: [{
+    .findAll({include: [{
+        model: db.models.Questions, include: [db.models.Answers]
+        }]
+    })
+    .then(projects => {
+        res.status(200).send(projects);
+    })
+};
+const findProjectsById = (req, res) => {
+    const projectId = req.params.projectId
+    db.models.Projects
+    .findById(projectId, {include: [{
         model: db.models.Questions, include: [db.models.Answers]
         }]
     })
@@ -61,6 +72,7 @@ const countItems = (req, res) => {
 module.exports = {
     homeRoute,
     findAllProjects,
+    findProjectsById,
     findQuestionById,
     findConclusionById,
     saveStatistics,
