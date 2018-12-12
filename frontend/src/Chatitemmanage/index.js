@@ -5,6 +5,9 @@
 import React, { Component } from 'react';
 import ChatitemRender from '../Chatitemrender';
 import sanja from './sanja.png';
+import Loader from 'react-loader-spinner';
+
+
 
 class ChatitemManage extends Component {
   constructor(props) {
@@ -37,7 +40,7 @@ class ChatitemManage extends Component {
 
   componentDidMount() {
     //fetches first question/answers -> set to state
-   fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch/questions/${this.props.questionId}`)
+   fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000/questions/${this.props.questionId}`)
     .then(res => res.json())
     .then(item => {
       this.setState({
@@ -50,12 +53,13 @@ class ChatitemManage extends Component {
 render() {
   //when question/answers have been fetched, map array an send to render_chat
   if (this.state.answers!=='') {
-  const allAnswers = this.state.answers.map((item, index) => (
+    const allAnswers = this.state.answers.map((item, index) => (
     <p key = {index} id = {index} nxt = {item.nxt} className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ?this.clickFunction(index) : ''}> {item.answer} </p>));
-  
     return (
     <ChatitemRender bot={sanja} question={this.state.question} answers={allAnswers}/>);
-  } else {return <p>No fetch</p>}
+  } else {
+    return <Loader type="ThreeDots" color="#dd007A" height={40} width={40} />
+  }
 }
 }
 

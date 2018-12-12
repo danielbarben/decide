@@ -3,8 +3,7 @@ import './App.css';
 import ChatitemManage from '../Chatitemmanage';
 import Conclusion from '../Conclusion';
 import Sanja from './sanja.png';
-import Spinner from 'react-spinner';
-import './spinner.css';
+import Loader from 'react-loader-spinner'
 
 class App extends Component {
   constructor(props) {
@@ -35,26 +34,45 @@ class App extends Component {
   //Get conclusion
   conclusion = (i) => {
     //fetch conclusion nr. i
-    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch/conclusions/${i}`)
+    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000/conclusions/${i}`)
     .then(res => res.json())
-    .then(item => {
+    .then(itemloaded => {
       this.setState({
-        conclusion: item.conclusion
+        conclusion: itemloaded.conclusion
       });
+
+      //=======================================================
+      const body = JSON.stringify({conclusion: itemloaded.title})
+      const headers = new Headers({
+        'Content-Type': 'application/json'
+      })
+      const config = {
+        headers: headers,
+        method: "POST",
+        body: body
+      }
+      fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000/statistics`, config)
+
+      //==========================================================
     });
-    // fetch statistics for Maria as exemple    
-    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch/statistics/Maria`)
+
+    //Post conclusion
+    
+    // fetch statistics    
+    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000/statistics/${this.props.match.params.id}`)
     .then(res => res.json())
     .then(item => {
+      let beautify = item.map((item, index) => <p className='conclusion' key={index}>{item.count}% {item.item}</p>);
+      //console.log(beautify)
       this.setState({
-        statistics: item[0]
+        statistics: beautify
       })
     })
   }
   
   componentDidMount() {
     //fetch first question for choosen game
-    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch/projects/firstquestion/${this.props.match.params.id}`)
+    fetch(`https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000/projects/firstquestion/${this.props.match.params.id}`)
     .then(res => res.json())
     .then(item => {
       this.setState({
@@ -77,11 +95,11 @@ class App extends Component {
       <Conclusion text={this.state.conclusion} statistics={this.state.statistics} bot={Sanja}/>
       <div style={{ float:"left", clear: "both"}} ref={(el) => { this.messagesEnd = el; }}>
         </div>
-        <Spinner />
     </div>
     )} else {
       return (
-        <div><Spinner/>
+        <div>
+          <Loader type="ThreeDots" color="#dd007A" height={80} width={80} /> 
           <div style={{ float:"left", clear: "both"}} ref={(el) => { this.messagesEnd = el; }}/>
         </div>)
         }
