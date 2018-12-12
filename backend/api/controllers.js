@@ -54,6 +54,7 @@ const findConclusionById = (req, res) => {
     })
 };
 const saveStatistics = (req,res) => {
+    console.log(req)
     const {conclusion} = req.body;
     if (conclusion) {
         db.models.Statistics.create({
@@ -134,21 +135,7 @@ const countItems = (req, res) => {
                               return 1;
                             return 0;
                           }
-                          
                           resultToSend.sort(compare);
-
-
-
-                        /*
-
-
-                        let ordered = {};
-Object.count(resultToSend).sort().forEach(function(key) {
-  ordered[key] = unordered[key];
-});
-*/
-
-                        //sort by countresult
                         res.status(200).send(resultToSend)
                     }
                 })
