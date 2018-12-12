@@ -54,7 +54,7 @@ const findConclusionById = (req, res) => {
     })
 };
 const saveStatistics = (req,res) => {
-    console.log(req)
+    //console.log(req)
     const {conclusion} = req.body;
     if (conclusion) {
         db.models.Statistics.create({
