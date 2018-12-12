@@ -95,6 +95,69 @@ const findConclusionByProject = (req, res) => {
 };
 
 const countItems = (req, res) => {
+    const projectId = req.params.projectId;
+    let total = 0;
+    db.models.Statistics
+    .findAndCountAll()
+    .then(counted => {
+        total = counted.count;
+        db.models.Conclusions
+        .findAll({
+            where: {
+            projectId : projectId
+            }   
+         })
+        .then(projects => {
+            const itemlist = projects.map((item, index) => {return item.title})
+            let countresult = [];
+            let counter = 0;
+            for (el of itemlist) {
+                db.models.Statistics.findAndCountAll({
+                    where: {
+                    item: el
+                    }
+                })
+                .then(cn => {
+                    countresult.push(cn)
+                    counter ++
+                    if (counter === itemlist.length) {
+                        let resultToSend = [];
+                        for (index in itemlist) {
+                            if (countresult[index].count>0) {
+                                resultToSend.push({'count':Math.round(100/total*countresult[index].count), 'item':countresult[index].rows[0].item})
+                            }
+                        }
+                        function compare(a,b) {
+                            if (a.count > b.count)
+                              return -1;
+                            if (a.count < b.count)
+                              return 1;
+                            return 0;
+                          }
+                          
+                          resultToSend.sort(compare);
+
+
+
+                        /*
+
+
+                        let ordered = {};
+Object.count(resultToSend).sort().forEach(function(key) {
+  ordered[key] = unordered[key];
+});
+*/
+
+                        //sort by countresult
+                        res.status(200).send(resultToSend)
+                    }
+                })
+            }
+        })
+    })
+};
+
+const countItemsbackup = (req, res) => {
     const projectId = req.params.projectId
     db.models.Conclusions
     .findAll({where: {
@@ -112,14 +175,15 @@ const countItems = (req, res) => {
                 }
             })
             .then(cn => {
-                console.log(cn)
-                countresult.push([cn.count])
+                //console.log(cn)
+                countresult.push([cn.count])  //cn senden und schauen, ob der name darin vorkommt
                 counter ++
                 if (counter === tmp.length) {
                     let resultToSend = [];
                     for (index in tmp) {
                         resultToSend.push([countresult[index] + ': ' + tmp[index]])
                     }
+                    //sort by countresult
                     res.status(200).send(resultToSend)}
             })
         }
