@@ -44,7 +44,7 @@ class App extends Component {
     let newItem = this.state.itemList;
     newItem.push(<Conclusion key={this.state.counter} id={i} bot={this.state.bot}/>)
     newItem.push(<Statistics key={this.state.counter+1} id={this.props.match.params.id} bot={this.state.bot}/>)
-    newItem.push(<Again key={this.state.counter+2} id={i} user={Du}/>)
+    newItem.push(<Again startover={this.startover} key={this.state.counter+2} id={i} user={Du}/>)
     let newCounter = this.state.counter;
     newCounter +=3;
     
@@ -52,7 +52,20 @@ class App extends Component {
       itemList: newItem,
       counter: newCounter
     })
-    
+  }
+
+  startover = () => {
+    fetch(`${api}/projects/firstquestion/${this.props.match.params.id}`)
+    .then(res => res.json())
+    .then(item => {
+      let firstItem = [];
+      firstItem.push(<ChatitemManage key={this.state.count} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={Sanja} user={Wahl}/>);
+      this.setState({
+        itemList:firstItem,
+        loading:false
+      })
+    })
+
   }
   
   componentDidMount() {
@@ -70,7 +83,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    setTimeout(this.scrollToBottom, 1000)
+    setTimeout(this.scrollToBottom, 1500)
   }
 
   render() {

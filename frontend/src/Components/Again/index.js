@@ -29,17 +29,12 @@ class Conclusion extends Component {
       })
     }
 
-    clickFunction () {
-      console.log('clicked')
-      //<Redirect to='/dashboard' />
-    }
-  
   render() {
     if (!this.state.twitter) {return <Spinner/>}
     else {
       return <div>
         <Userrender user={this.props.user} text={this.state.twitter}/>
-        <Userrender user={this.props.user} text={<p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.clickFunction() : ''}>Noch einmal spielen</p>}/>
+        <Userrender user={this.props.user} text={<p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.props.startover() : ''}>Noch einmal spielen</p>}/>
       </div>
   }
 }
