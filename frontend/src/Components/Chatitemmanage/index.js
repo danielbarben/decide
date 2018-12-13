@@ -60,7 +60,6 @@ componentDidMount() {
     });
   }
 
-
 render() {
 let allAnswers = '';
   if (this.state.answers) {allAnswers = this.state.answers.map((item, index) => <p key = {index} id = {index} nxt = {item.nxt} className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.clickFunction(index) : ''}> {item.answer} </p>)}
