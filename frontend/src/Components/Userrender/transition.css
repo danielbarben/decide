@@ -1,0 +1,142 @@
+
+
+.user-leave {
+}
+
+.user-leave.user-leave-active {
+  /*transform: scale(1,0.4) translateX(360px);*/
+  transform: scale(0.60,0);
+  transition: 300ms ease-in;
+}
+
+.user-appear { 
+  transform: translateX(-360px);
+}
+
+.user-appear.user-appear-active {
+  transform:translateX(0);
+  transition: 300ms ease-in;
+}
+
+.bot-appear { 
+  transform:translateX(360px);
+}
+
+.bot-appear.bot-appear-active {
+  transform:translateX(0);
+  transition: 300ms ease-in;
+}
+
+:root {
+  --pink: #dd007A;
+  --blue: #111133;
+  --green: #17A600;
+  --white: #FFFFFF
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+#chat {
+  width: 360px;
+  overflow: hidden;
+}
+
+/*chat general*/
+
+.chatitem {
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: flex;
+  width:360px;
+  
+}
+
+.user {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.bot {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* avatar */
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+}
+
+.user .avatar {
+  order: 2;
+}
+
+/* Message*/
+
+.msg {
+  
+}
+
+.msg p {
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem 0;
+  padding: 0.6rem;
+  color: var(--white);
+  border-radius: 10px;
+}
+
+/* CHECK */
+
+.msg img {
+  position: relative;
+  display: block;
+  width: 450px;
+  border-radius: 10px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.bot p {
+  background: var(--pink);
+  margin-left: 10px;
+}
+
+.user .msg p {
+  background: var(--blue);
+  margin-right: 10px;
+}
+
+.user .msg .def {
+  background: var(--blue);
+}
+
+.user .button:hover {
+  background: var(--green);
+  cursor: pointer;
+  -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+}
+
+@media screen and (max-width: 800px) {
+  .msg img {
+      width: 300px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .msg img {
+      width: 200px;
+  }
+}
+

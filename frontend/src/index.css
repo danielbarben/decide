@@ -17,5 +17,6 @@ code {
 
 #root {
   width:360px;
-  overflow:hidden
+  overflow:hidden;
+  text-align:center;
 }

@@ -54,7 +54,6 @@ const findConclusionById = (req, res) => {
     })
 };
 const saveStatistics = (req,res) => {
-    //console.log(req)
     const {conclusion} = req.body;
     if (conclusion) {
         db.models.Statistics.create({
@@ -68,20 +67,7 @@ const saveStatistics = (req,res) => {
         })
     }
 };
-/*
-const countItems = (req, res) => {
-    const keyword = req.params.item
-    db.models.Statistics.findAndCountAll({
-        where: {
-           item: keyword
-        }
-    })
-    .then(item => {
-        console.log(item.count)
-        item === null ? res.status(404).send([]) : res.send([item.count])
-    })
-};
-*/
+
 const findConclusionByProject = (req, res) => {
     const projectId = req.params.projectId
     db.models.Conclusions
@@ -98,10 +84,10 @@ const findConclusionByProject = (req, res) => {
 const countItems = (req, res) => {
     const projectId = req.params.projectId;
     let total = 0;
-    db.models.Statistics
+    /*db.models.Statistics
     .findAndCountAll()
     .then(counted => {
-        total = counted.count;
+        //total = counted.count;*/
         db.models.Conclusions
         .findAll({
             where: {
@@ -112,6 +98,7 @@ const countItems = (req, res) => {
             const itemlist = projects.map((item, index) => {return item.title})
             let countresult = [];
             let counter = 0;
+
             for (el of itemlist) {
                 db.models.Statistics.findAndCountAll({
                     where: {
@@ -121,6 +108,7 @@ const countItems = (req, res) => {
                 .then(cn => {
                     countresult.push(cn)
                     counter ++
+                    total = total + cn.count;
                     if (counter === itemlist.length) {
                         let resultToSend = [];
                         for (index in itemlist) {
@@ -141,7 +129,7 @@ const countItems = (req, res) => {
                 })
             }
         })
-    })
+    /*})*/
 };
 
 const countItemsbackup = (req, res) => {

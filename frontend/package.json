@@ -9,7 +9,8 @@
     "react-loader-spinner": "^2.3.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "react-spinner": "^0.2.7"
+    "react-spinner": "^0.2.7",
+    "react-twitter-embed": "^2.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
