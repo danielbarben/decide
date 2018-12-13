@@ -4,6 +4,7 @@ const controllers = require('./controllers.js');
 
 router.get('/', controllers.homeRoute);
 router.get('/projects', controllers.findAllProjects);
+router.get('/landingpage', controllers.landingpage);
 router.get('/projects/firstquestion/:projectId', controllers.findFirstQuestion);
 router.get('/projects/:projectId', controllers.findProjectsById);
 router.get('/questions/:questionId', controllers.findQuestionById);

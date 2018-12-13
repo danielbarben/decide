@@ -25,7 +25,7 @@ const Projects = sequelize.define('projects', {
       type: Sequelize.TEXT,
       allowNull: false
     }
-},// { force: true }
+}//, { force: true }
 )
 
 const Questions = sequelize.define('questions', {

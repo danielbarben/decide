@@ -3,6 +3,14 @@ const db = require('../db/index.js');
 const homeRoute = (req, res) => {
     res.send("Server is running")
 }
+const landingpage = (req, res) => {
+    db.models.Projects
+    .findAll({ order: [['id', 'DESC']]})
+    .then(projects => {
+        res.status(200).send(projects);
+    })
+};
+
 const findAllProjects = (req, res) => {
     db.models.Projects
     .findAll({include: [{
@@ -174,5 +182,6 @@ module.exports = {
     saveStatistics,
     countItems,
     findConclusionByProject,
-    findFirstQuestion
+    findFirstQuestion,
+    landingpage
 }
