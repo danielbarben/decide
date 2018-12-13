@@ -4,7 +4,7 @@ import './landingpage.css';
 import '../Components/Botrender/transition.css';
 import Sanja from '../App/sanja.png';
 import Herbert from '../App/herbert.png';
-import Georg from '../App/john.png';
+import Georg from '../App/georg.png';
 import { Link } from 'react-router-dom';
 
 //const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000';
