@@ -54,7 +54,6 @@ const findQuestionById = (req, res) => {
     })
 };
 const findConclusionById = (req, res) => {
-    console.log(req.params.conclusionId)
     const conclusionId = req.params.conclusionId;
     db.models.Conclusions.findById(conclusionId)
     .then(conclusion => {
@@ -158,7 +157,6 @@ const countItemsbackup = (req, res) => {
                 }
             })
             .then(cn => {
-                //console.log(cn)
                 countresult.push([cn.count])  //cn senden und schauen, ob der name darin vorkommt
                 counter ++
                 if (counter === tmp.length) {

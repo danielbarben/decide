@@ -1,5 +1,5 @@
 module.exports = [{
-    questionId: 26,
+  questionId: 26,
     answer: 'Wo ist der Sekt?',
     nxt:'q27'
 },
@@ -189,12 +189,12 @@ questionId: 26,
     nxt:'c21'
 },
 {
-  questionId: 1,
+  questionId: 34,
     answer: 'Ich schaue das Neujahrs-Skispringen',
     nxt:'c22'
 },
 {
-  questionId: 1,
+  questionId: 34,
     answer: 'Ich gehe Schlitteln',
     nxt:'c18'
 }]

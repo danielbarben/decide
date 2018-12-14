@@ -28,7 +28,7 @@ const Projects = sequelize.define('projects', {
     order: {
         type: Sequelize.INTEGER
     }
-}, { force: true }
+}//, { force: true }
 )
 
 const Questions = sequelize.define('questions', {
