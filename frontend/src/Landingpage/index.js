@@ -40,7 +40,6 @@ class Landingpage extends Component {
       } else {
         return this.state.itemList.map((item, index) => {
           const avatar = <div className='avatar'><img src={botPic[item.bot]} alt=''/></div>;
-          console.log(item.bot)
           return <div className='chatitem bot' key={index}><div className='chatitem bot'>{avatar}<Link to={'/'+item.id} className='droplet'><p>{item.description}</p><p className='autor'>Text: {item.autor}</p></Link></div></div>;
         })
     }

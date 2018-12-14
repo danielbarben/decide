@@ -28,7 +28,6 @@ class Statistics extends Component {
   } 
 
   render() {
-    //console.log(this.state.text)
     const zwischentext = <p>Na, zufrieden? Das Resultat der anderen:</p>;
     if (!this.state.text) {
       return (

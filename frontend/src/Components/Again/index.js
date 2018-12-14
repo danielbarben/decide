@@ -2,6 +2,7 @@
 //Takes Props id of conclusion and avatar of user
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 //import { BrowserRouter, Route, Redirect, Link} from 'react-router-dom';
 import Userrender from '../Userrender';
 import { TwitterShareButton } from 'react-twitter-embed';
@@ -34,7 +35,7 @@ class Conclusion extends Component {
     else {
       return <div>
         <Userrender user={this.props.user} text={this.state.twitter}/>
-        <Userrender user={this.props.user} text={<p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.props.startover() : ''}>Noch einmal spielen</p>}/>
+        <Userrender user={this.props.user} text={<p className = {this.state.clickable ? 'button' : ''} onClick = ''><Link to='./'>Noch einmal, bitte!</Link></p>}/>
       </div>
   }
 }

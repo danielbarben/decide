@@ -91,6 +91,11 @@ body {
   border-radius: 10px;
 }
 
+.msg a {
+  color: white;
+  text-decoration: none;
+}
+
 /* CHECK */
 
 .msg img {

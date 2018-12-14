@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
     this.state = {
       counter:2,
-      project: this.props.match.params.id,
+      //project: this.props.match.params.id,
       bot: '',
       itemList: []
     }
@@ -33,7 +33,7 @@ class App extends Component {
   nextQuestion = (i) => {
     // define new Item
     let newItem = this.state.itemList;
-    newItem.push(<ChatitemManage key={this.state.counter} questionId={i} clickable={true} next={this.nextQuestion} conclusion={this.conclusion}scrollToBottm={this.scrollToBottom} bot={Sanja} user={Du}/>);
+    newItem.push(<ChatitemManage key={this.state.counter} questionId={i} clickable={true} next={this.nextQuestion} conclusion={this.conclusion}scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Du}/>);
     // counter for react-key
     let newCounter = this.state.counter;
     newCounter++;
@@ -58,22 +58,28 @@ class App extends Component {
       counter: newCounter
     })
   }
-
+/*
   startover = () => {
     fetch(`${api}/projects/firstquestion/${this.state.project}`)
     .then(res => res.json())
     .then(item => {
       let firstItem = [];
-      firstItem.push(<ChatitemManage key={this.state.count} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={Sanja} user={Wahl}/>);
+      firstItem.push(<ChatitemManage key={this.state.count} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Wahl}/>);
       this.setState({
         itemList:firstItem,
         loading:false
       })
     })
   }
-  
+  */
   componentDidMount() {
     //fetch first question ID for choosen Project
+    fetch(`${api}/landingpage`)
+    .then(res => res.json())
+    .then(item => {
+      let tmp = item.find( el => el.id == this.props.match.params.id);
+      this.setState({bot: botPic[tmp.bot]})
+    });
     fetch(`${api}/projects/firstquestion/${this.props.match.params.id}`)
     .then(res => res.json())
     .then(item => {
@@ -83,12 +89,6 @@ class App extends Component {
         itemList:firstItem,
         loading:false
       })
-    })
-    fetch(`${api}/landingpage`)
-    .then(res => res.json())
-    .then(item => {
-      console.log(item)
-      //this.setState({bot: botPic[item[this.props.match.params.id].bot]})
     })
   }
 
