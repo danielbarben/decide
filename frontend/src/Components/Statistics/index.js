@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 //import '../Chatitemrender/transition.css';
 import Spinner from '../Spinner'
 import Botrender from '../Botrender'
-const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000'
+import api from '../../api.js'
 
 class Statistics extends Component {
   constructor(props) {

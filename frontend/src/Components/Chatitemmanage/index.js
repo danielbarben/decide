@@ -3,13 +3,11 @@
 //handles click on answer
 
 import React, { Component } from 'react';
-//import Sanja from './sanja.png';
-import Du from '../../App/du.png';
+import Du from '../../img/du.png';
 import Botrender from '../Botrender'
 import Userrender from '../Userrender';
-//import Userrender from '../Userrender/index.js';
 import Spinner from '../Spinner'
-const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000'
+import api from '../../api.js'
 
 class ChatitemManage extends Component {
   constructor(props) {

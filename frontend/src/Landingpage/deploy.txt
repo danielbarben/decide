@@ -1,0 +1,4 @@
+ornder constants.js
+src/constants.js
+const baseurl = "window.location.hostname == 'localhost' ? 'http://localhost:3000' : 'https://url zum Backend'
+export {baseurl}

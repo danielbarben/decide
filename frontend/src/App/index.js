@@ -5,18 +5,23 @@ import Conclusion from '../Components/Conclusion';
 import Spinner from '../Components/Spinner';
 import Statistics from '../Components/Statistics';
 import Again from '../Components/Again';
-import Sanja from './sanja.png';
-import Du from './du.png';
-import Wahl from './wahl.png';
-
-const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000'
+import Du from '../img/du.png';
+import Wahl from '../img/wahl.png';
+import api from '../api.js'
+import Alexandra from '../img/alexandra.png';
+import Georg from '../img/georg.png';
+import Herbert from '../img/herbert.png';
+import John from '../img/john.png';
+import Sanja from '../img/sanja.png';
+let botPic = {'Alexandra': Alexandra, 'Georg': Georg, 'Herbert': Herbert, 'John': John, 'Sanja':Sanja}
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       counter:2,
-      bot: Sanja,
+      project: this.props.match.params.id,
+      bot: '',
       itemList: []
     }
   }
@@ -43,7 +48,7 @@ class App extends Component {
   conclusion = (i) => {
     let newItem = this.state.itemList;
     newItem.push(<Conclusion key={this.state.counter} id={i} bot={this.state.bot}/>)
-    newItem.push(<Statistics key={this.state.counter+1} id={this.props.match.params.id} bot={this.state.bot}/>)
+    newItem.push(<Statistics key={this.state.counter+1} id={this.state.project} bot={this.state.bot}/>)
     newItem.push(<Again startover={this.startover} key={this.state.counter+2} id={i} user={Du}/>)
     let newCounter = this.state.counter;
     newCounter +=3;
@@ -55,7 +60,7 @@ class App extends Component {
   }
 
   startover = () => {
-    fetch(`${api}/projects/firstquestion/${this.props.match.params.id}`)
+    fetch(`${api}/projects/firstquestion/${this.state.project}`)
     .then(res => res.json())
     .then(item => {
       let firstItem = [];
@@ -65,7 +70,6 @@ class App extends Component {
         loading:false
       })
     })
-
   }
   
   componentDidMount() {
@@ -74,13 +78,20 @@ class App extends Component {
     .then(res => res.json())
     .then(item => {
       let firstItem = [];
-      firstItem.push(<ChatitemManage key={1} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={Sanja} user={Wahl}/>);
+      firstItem.push(<ChatitemManage key={1} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Wahl}/>);
       this.setState({
         itemList:firstItem,
         loading:false
       })
     })
+    fetch(`${api}/landingpage`)
+    .then(res => res.json())
+    .then(item => {
+      console.log(item)
+      //this.setState({bot: botPic[item[this.props.match.params.id].bot]})
+    })
   }
+
 
   componentDidUpdate() {
     setTimeout(this.scrollToBottom, 1500)

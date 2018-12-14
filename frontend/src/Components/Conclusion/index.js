@@ -3,10 +3,9 @@
 //Takes as Props:
 
 import React, { Component } from 'react';
-//import '../../Chatitemrender/transition.css';
 import Spinner from '../Spinner'
 import Botrender from '../Botrender'
-const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000'
+import api from '../../api.js'
 
 class Conclusion extends Component {
   constructor(props) {

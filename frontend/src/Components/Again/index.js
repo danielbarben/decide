@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Userrender from '../Userrender';
 import { TwitterShareButton } from 'react-twitter-embed';
 import Spinner from '../Spinner';
-const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000'
+import api from '../../api.js'
 
 
 class Conclusion extends Component {
