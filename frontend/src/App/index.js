@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
     this.state = {
       counter:2,
-      //project: this.props.match.params.id,
+      project: this.props.match.params.id,
       bot: '',
       itemList: []
     }
