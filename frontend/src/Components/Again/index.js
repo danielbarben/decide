@@ -8,7 +8,6 @@ import { TwitterShareButton } from 'react-twitter-embed';
 import Spinner from '../Spinner';
 import api from '../../api.js'
 
-
 class Conclusion extends Component {
   constructor(props) {
     super(props);
