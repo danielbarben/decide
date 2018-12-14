@@ -3,7 +3,6 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import { BrowserRouter, Route, Redirect, Link} from 'react-router-dom';
 import Userrender from '../Userrender';
 import { TwitterShareButton } from 'react-twitter-embed';
 import Spinner from '../Spinner';
