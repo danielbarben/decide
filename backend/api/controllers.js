@@ -5,7 +5,7 @@ const homeRoute = (req, res) => {
 }
 const landingpage = (req, res) => {
     db.models.Projects
-    .findAll({ order: [['id', 'DESC']]})
+    .findAll({ order: [['order', 'ASC']]})
     .then(projects => {
         res.status(200).send(projects);
     })

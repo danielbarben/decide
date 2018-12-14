@@ -7,7 +7,8 @@ db.conn.sync().then(() => {
             name: project.name,
             bot: project.bot,
             description: project.description,
-            autor: project.autor
+            autor: project.autor,
+            order: project.order
         })
     })
 });

@@ -24,8 +24,11 @@ const Projects = sequelize.define('projects', {
     autor: {
       type: Sequelize.TEXT,
       allowNull: false
+    },
+    order: {
+        type: Sequelize.INTEGER
     }
-}//, { force: true }
+}, { force: true }
 )
 
 const Questions = sequelize.define('questions', {
