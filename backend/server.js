@@ -13,8 +13,7 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({
   extended: false 
 }));
-//app.use(bodyParser.json());
-//app.use(bodyParser.json({ extended: false })); //aus dem Beispiel
+app.use(bodyParser.json());
 app.use(router)
 
 app.listen(PORT, () => {
