@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
   extended: false 
 }))
 app.use(bodyParser.json())*/
-server.use(bodyParser.json({ extended: false })); aus dem Beispiel
+server.use(bodyParser.json({ extended: false })); //aus dem Beispiel
 app.use(router)
 
 app.listen(PORT, () => {
