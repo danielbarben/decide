@@ -111,7 +111,7 @@ questionId: 26,
 {
   questionId: 31,
     answer: 'Mehr Sport!',
-    nxt:'q31'
+    nxt:'q32'
 },
 {
     questionId: 31,
@@ -184,7 +184,7 @@ questionId: 26,
     nxt:'c20'
 },
 {
-  questionId: 33,
+  questionId: 34,
     answer: 'Ich verschicke lustige Neujahrs-SMS', 
     nxt:'c21'
 },

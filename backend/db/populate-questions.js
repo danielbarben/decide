@@ -1,5 +1,5 @@
 const db = require('./index.js');
-const questionList = require('./data/dinner_tmp.js');
+const questionList = require('./data/X_fragen.js');
 
 db.conn.sync().then(() => {
     questionList.forEach(question => {

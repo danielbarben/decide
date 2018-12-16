@@ -1,0 +1,9 @@
+Zeile löschen
+DELETE FROM table
+WHERE condition;
+
+Zellen mit ID grösser als X löschen
+DELETE from questions WHERE id > X
+
+Fragen finden
+SELECT * FROM questions
