@@ -35,7 +35,7 @@ class Landingpage extends Component {
 
   render() {
 
-    if (this.state.itemList === '') {
+    if (this.state.loading) {
       return <Spinner/>
       } else {
         return this.state.itemList.map((item, index) => {
