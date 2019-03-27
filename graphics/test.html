@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        :root {
+            --pink: #dd007A;
+            --blue: #111133;
+            --green: #17A600;
+            --white: #FFFFFF
+        }
+
+        html,
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #chat {
+            width: 360px;
+            overflow: hidden;
+        }
+
+        /*chat general*/
+
+        .chatitem {
+            margin: 0 0 20px 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .user {
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .bot {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        /* avatar */
+
+        .avatar img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .user .avatar {
+            order: 2;
+        }
+
+        /* Message*/
+
+        .msg {}
+
+        .msg p {
+            font-size: 0.8rem;
+            margin: 0 0 0.4rem 0;
+            padding: 0.6rem;
+            color: var(--white);
+            border-radius: 10px;
+        }
+
+        /* CHECK */
+
+        .msg img {
+            position: relative;
+            display: block;
+            width: 450px;
+            border-radius: 10px;
+            cursor: default;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .bot p {
+            background: var(--pink);
+            margin-left: 10px;
+        }
+
+        .user .msg p {
+            background: var(--blue);
+            margin-right: 10px;
+        }
+
+        .user .msg .def {
+            background: var(--blue);
+        }
+
+        .user .button:hover {
+            background: var(--green);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 800px) {
+            .msg img {
+                width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .msg img {
+                width: 200px;
+            }
+        }
+
+        @-webikt-keyframes pulse {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            min-width: 12px;
+            width: 12px;
+            max-width: 12px;
+            min-height: 12px;
+            height: 12px;
+            max-height: 12px;
+            background: #e5e5e5;
+            box-shadow: inset 0px 50px 0px rgba(82, 179, 217, 0.9), inset 0px -52px 0px #fafafa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bbb;
+            border: none;
+            border-radius: 100px;
+            border: solid 3px #e5e5e5;
+            box-shadow: inset 0px 0px 3px #999;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b0b0b0;
+            box-shadow: inset 0px 0px 3px #888;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: #aaa;
+            box-shadow: inset 0px 0px 3px #7f7f7f;
+        }
+
+        ::-webkit-scrollbar-button {
+            display: block;
+            height: 26px;
+        }
+
+
+        .left {
+            margin-left: -380px;
+            width: 360px;
+        }
+
+        .right {
+            margin-left: 380px;
+            width: 360px;
+        }
+
+        .buttonxxxx {
+            cursor: pointer;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            margin-left: 320px;
+            width: 360px;
+            ;
+        }
+    </style>
+
+    <div id="chat"></div>
+    <!--<ol class="chat">-->
+
+
+    <!--    <li class="user">-->
+    <!--        <div class="avatar"><img src="./data/du.png" draggable="false" /></div>-->
+    <!--        <div class="msg">-->
+    <!--            <p class="def">Etiam facilisis ex eget venenatis commodo.</p>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <!--    <li class="bot">-->
+    <!--        <div class="avatar"><img src="./data/sanja.png" /></div>-->
+    <!--        <div class="msg">-->
+    <!--            <p>Qué contexto de Góngora?</p>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <!--    <li class="user">-->
+    <!--        <div class="avatar"><img src="./data/entscheid.png" draggable="false" /></div>-->
+    <!--        <div class="msg">-->
+    <!--            <p>El que mandó Marialu</p>-->
+    <!--            <p>Es para mañana...</p>-->
+    <!--            <p>El que mandó Marialu</p>-->
+    <!--            <p>Es para mañana...</p>-->
+    <!--        </div>-->
+
+    <!--    </li>-->
+    <!--    <li class="bot">-->
+    <!--        <div class="avatar"><img src="data/sanja.png" draggable="false" /></div>-->
+    <!--        <div class="msg">-->
+    <!--            <img src="https://i.imgur.com/QAROObc.jpg" draggable="false" />-->
+    <!--            <p>Pásamelo!</p>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <!--</ol>-->
+    <!--<ol class="chat">-->
+    <!--    <li class="bot">-->
+    <!--        <div class="avatar"><img src="data/sanja.png" /></div>-->
+    <!--        <div class="msg">-->
+    <!--            <p>Hola! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus pulvinar quam, eu tempor lacus vulputate sit amet. Nunc sit amet nibh volutpat, pulvinar lorem ac, scelerisque ante.</p>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <!--</ol>-->
+
+    <script>
+        $(function() {
+            const sanja01 = `<div class='flyin right chatitem bot'><div class='avatar'><img src='data/sanja.png'/></div><div class='msg'><p>Hola! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus pulvinar quam, eu tempor lacus vulputate sit amet. Nunc sit amet nibh volutpat, pulvinar lorem ac, scelerisque ante.</p></div></div>`;
+
+            const sanja02 = `<div class="sanja"><ol class='chat'><li class="bot"><div class="avatar"><img src="data/sanja.png"/></div><div class="msg"><p>Hola! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus pulvinar quam, eu tempor lacus vulputate sit amet. Nunc sit amet nibh volutpat, pulvinar lorem ac, scelerisque ante.</p></div></li></ol></div>`;
+
+            const user01 = `<div class='flyin left chatitem user'><div class='avatar tmp'><img src='./data/entscheid.png'/></div><div class='msg user'><p class='button active'>El que mandó Marialu</p><p class='button active'>Es para mañana...</p><p class='button active'>El que mandó Marialu</p><p class='button active'>Es para mañana...</p></div></div>`
+
+            // Add Buttons to root for the first time
+            $('#chat').append(sanja01);
+            $('.flyin').animate({ 'margin-left': '0' }, 'slow');
+            $('#chat').append(user01);
+            $('.flyin').animate({ 'margin-left': '0' }, 'slow');
+
+            //Add next Buttons
+            const addButton = () => {
+                $('#chat').append(sanja01);
+                $('.flyin').animate({ 'margin-left': '0' }, 'slow');
+                $('#chat').append(user01);
+                $('.flyin').animate({ 'margin-left': '0' }, 'slow');
+
+                //Scroll to Bottom
+                $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+            }
+
+            //Event Handler
+            $('#chat').on('click', '.button', (event) => {
+                $(event.currentTarget).removeClass('button');
+                $('.tmp').html(`<img src='./data/du.png'/>`).removeClass('tmp');
+                $('.button').html('').animate({
+                    'width': '0',
+                    'height': '0',
+                    'margin': '0',
+                    'padding': '0'
+                }, 'slow', function() {
+                    $('button').remove();
+                    
+                });
+                addButton();
+
+            });
+
+        })
+    </script>
+
+</body>
+
+</html>

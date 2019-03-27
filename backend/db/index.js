@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
-const dbURL = `postgres://sabgaefn:iwuBcWa8aIQnIv09mGHFzWdUQn5zZHX8@manny.db.elephantsql.com:5432/sabgaefn`;
-const sequelize = new Sequelize(dbURL);
+const sequelize = new Sequelize('decide', 'doadmin', 'rmdli1r5aie0v93u', {
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: true
+    },
+    host: "db-postgresql-fra1-02285-do-user-4451433-0.db.ondigitalocean.com",
+    port: 25060,
+  })
 
 //Models
 const Projects = sequelize.define('projects', {
@@ -45,7 +51,7 @@ const Questions = sequelize.define('questions', {
         type: Sequelize.STRING,
         allowNull: false
     }
-}, //{ force: true }
+}//, { force: true }
 )
 
 const Answers = sequelize.define('answers', {
@@ -92,7 +98,7 @@ const Conclusions = sequelize.define('conclusions', {
         allowNull: false
     }
 
-}, //{ force: true }
+}//, { force: true }
 )
 
 const Statistics = sequelize.define('statistics', {
@@ -105,7 +111,7 @@ const Statistics = sequelize.define('statistics', {
       type: Sequelize.STRING,
       allowNull: false
   }
-}, //{ force: true }
+}, { force: true }
 )
 
 // relations
