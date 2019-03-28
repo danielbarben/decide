@@ -37,4 +37,8 @@ module.exports = [{
 {
   projectId: 3,
   question: "Glaubst Du an Neujahrshoroskope?"
+},
+{
+  projectId: 3,
+  question: "Echt jetzt?"
 }];

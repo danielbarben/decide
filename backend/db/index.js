@@ -111,7 +111,7 @@ const Statistics = sequelize.define('statistics', {
       type: Sequelize.STRING,
       allowNull: false
   }
-}, { force: true }
+},// { force: true }
 )
 
 // relations
