@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
-import Spinner from '../Components/Spinner';
+import Projects from './Projects';
+import Intro from './Intro';
 import './landingpage.css';
 import '../Components/Botrender/transition.css';
-import Alexandra from '../img/alexandra.png';
-import Georg from '../img/georg.png';
-import Herbert from '../img/herbert.png';
-import John from '../img/john.png';
-import Sanja from '../img/sanja.png';
 
-import { Link } from 'react-router-dom';
 import api from '../api.js'
-let botPic = {'Alexandra': Alexandra, 'Georg': Georg, 'Herbert': Herbert, 'John': John, 'Sanja':Sanja}
-
-//const api = 'https://cors-anywhere.herokuapp.com/http://newsdesign.ch:8000';
-//const api = 'http://newsdesign.ch:8000';
 
 class Landingpage extends Component {
   constructor(props) {
@@ -24,7 +15,6 @@ class Landingpage extends Component {
     }
   }
 
-
   componentDidMount() {
     fetch(`${api}/landingpage`)
     .then(res => res.json())
@@ -32,17 +22,8 @@ class Landingpage extends Component {
       this.setState({itemList: item, loading: false})
     })
   }
-
   render() {
-
-    if (this.state.loading) {
-      return <Spinner/>
-      } else {
-        return this.state.itemList.map((item, index) => {
-          const avatar = <div className='avatar'><img src={botPic[item.bot]} alt=''/></div>;
-          return <div className='chatitem bot' key={index}><div className='chatitem bot'>{avatar}<Link to={'/'+item.id} className='droplet'><p>{item.description}</p><p className='autor'>Text: {item.autor}</p></Link></div></div>;
-        })
-    }
+    return <div><Intro/><Projects/></div>
   }
 }
 

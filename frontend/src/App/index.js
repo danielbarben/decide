@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './bot.css';
 import ChatitemManage from '../Components/Chatitemmanage';
 import Conclusion from '../Components/Conclusion';
 import Spinner from '../Components/Spinner';
@@ -33,7 +34,7 @@ class App extends Component {
   nextQuestion = (i) => {
     // define new Item
     let newItem = this.state.itemList;
-    newItem.push(<ChatitemManage key={this.state.counter} questionId={i} clickable={true} next={this.nextQuestion} conclusion={this.conclusion}scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Du}/>);
+    newItem.push(<ChatitemManage key={this.state.counter} questionId={i} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Du}/>);
     // counter for react-key
     let newCounter = this.state.counter;
     newCounter++;
@@ -44,12 +45,29 @@ class App extends Component {
       counter: newCounter
     })
   }
+  
+  // Statistik zeigen
+  showStatistics = (i) => {
+    let newItem = this.state.itemList;
+    newItem.push(<Statistics id={this.state.project} bot={this.state.bot} user={Du}/>)
+    //newItem.push(<Again startover={this.startover} key={this.state.counter+2} id={i} user={Du}/>)
+    let newCounter = this.state.counter;
+    newCounter +=3;
+    
+    this.setState({
+      itemList: newItem,
+      counter: newCounter
+    })
+
+  }
+  
   //Get conclusion
   conclusion = (i) => {
     let newItem = this.state.itemList;
+    //console.log(this.showStatistics)
     newItem.push(<Conclusion key={this.state.counter} id={i} bot={this.state.bot}/>)
-    newItem.push(<Statistics key={this.state.counter+1} id={this.state.project} bot={this.state.bot}/>)
-    newItem.push(<Again startover={this.startover} key={this.state.counter+2} id={i} user={Du}/>)
+    //newItem.push(<Statistics key={this.state.counter+1} id={this.state.project} bot={this.state.bot}/>)
+    newItem.push(<Again startover={this.startover} showStatistics={this.showStatistics} key={this.state.counter+2} id={i} user={Du}/>)
     let newCounter = this.state.counter;
     newCounter +=3;
     
@@ -58,20 +76,7 @@ class App extends Component {
       counter: newCounter
     })
   }
-/*
-  startover = () => {
-    fetch(`${api}/projects/firstquestion/${this.state.project}`)
-    .then(res => res.json())
-    .then(item => {
-      let firstItem = [];
-      firstItem.push(<ChatitemManage key={this.state.count} questionId={item.id} clickable={true} next={this.nextQuestion} conclusion={this.conclusion} scrollToBottm={this.scrollToBottom} bot={this.state.bot} user={Wahl}/>);
-      this.setState({
-        itemList:firstItem,
-        loading:false
-      })
-    })
-  }
-  */
+  
   componentDidMount() {
     //fetch first question ID for choosen Project
     fetch(`${api}/landingpage`)
@@ -94,7 +99,7 @@ class App extends Component {
 
 
   componentDidUpdate() {
-    setTimeout(this.scrollToBottom, 1500)
+    setTimeout(this.scrollToBottom, 1000)
   }
 
   render() {

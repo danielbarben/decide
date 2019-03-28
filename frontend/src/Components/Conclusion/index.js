@@ -11,7 +11,8 @@ class Conclusion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: '',
+      tmptext: 'Na, zufrieden?'
     }
   }
 
@@ -19,7 +20,7 @@ class Conclusion extends Component {
     fetch(`${api}/conclusions/${this.props.id}`)
     .then(res => res.json())
     .then(itemloaded => {
-      this.setState({text:<p>{itemloaded.conclusion}</p>})
+      this.setState({text:<><p>{itemloaded.conclusion}</p><p> Na, zufrieden?</p></>})
       const body = JSON.stringify({conclusion: itemloaded.title})
       const headers = new Headers({
         'Content-Type': 'application/json'
@@ -37,7 +38,7 @@ class Conclusion extends Component {
     if (!this.state.text) {
       return (
         <Spinner />
-      )} else {return <Botrender bot={this.props.bot} text={this.state.text}/>} 
+      )} else {return <div><Botrender bot={this.props.bot} text={this.state.text}/></div>} 
   }
 }
 

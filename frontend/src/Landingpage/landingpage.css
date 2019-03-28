@@ -22,6 +22,11 @@
   color: white;
 }
 
+.intro {
+  text-align:left;
+  margin-bottom:20px;
+}
+
 .droplet {
   width:100%;
   background: var(--pink);

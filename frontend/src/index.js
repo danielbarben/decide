@@ -12,8 +12,8 @@ ReactDOM.render(
   <div>
     <Header/>
     <Switch>
-      <Route exact path="/" component={ Landingpage } />
-      <Route exact path="/:id" component={ App } />
+      <Route exact path="/" component = { Landingpage } />
+      <Route exact path="/:id" component = { App } />
     </Switch>
     <Footer/>
     </div>

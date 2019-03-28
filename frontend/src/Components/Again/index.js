@@ -4,8 +4,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Userrender from '../Userrender';
+import Botrender from '../Botrender';
 import { TwitterShareButton } from 'react-twitter-embed';
 import Spinner from '../Spinner';
+import Statistics from '../Statistics';
 import api from '../../api.js'
 
 class Conclusion extends Component {
@@ -14,6 +16,9 @@ class Conclusion extends Component {
     this.state = {
       twitter: '',
       clickable: true,
+      //text: '',
+      //statistics: false
+      //tweetURL: `https://twitter.com/intent/tweet?text=+quote+ By +authorName`
     }
   }
   
@@ -21,22 +26,30 @@ class Conclusion extends Component {
     fetch(`${api}/conclusions/${this.props.id}`)
     .then(res => res.json())
     .then(itemloaded => {
-      this.setState({twitter: <div><p>Resultat twittern: <TwitterShareButton
+      /*this.setState({twitter: <div>Ja, das Resultat twittern.<TwitterShareButton
         url={'https://newsdesign.ch'}
         options={{ text: itemloaded.twittertext + 'Und Du? Probier es aus:'}}
-      /></p></div>})
+      /></div>})*/
+      this.setState({twitter: `https://twitter.com/intent/tweet?text=+${itemloaded.twittertext}+ Und Du? Finde es heraus: newsdesign.ch`})
       })
+      //console.log(this.props.id)
     }
 
   render() {
     if (!this.state.twitter) {return <Spinner/>}
     else {
       return <div>
-        <Userrender user={this.props.user} text={this.state.twitter}/>
-        <Userrender user={this.props.user} text={<p className = {this.state.clickable ? 'button' : ''} onClick = ''><Link to='./'>Noch einmal, bitte!</Link></p>}/>
-      </div>
+        <Userrender user={this.props.user} text={<>
+        {/* Twittern */}
+        <p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? window.open(this.state.twitter) : ''}>Ja, Resultat twittern</p>
+        {/* Noch einmal */}
+        <p className = {this.state.clickable ? 'button' : ''} onClick = ''><Link to='./'>Nein, noch einmal, bitte!</Link></p>
+        {/* Statistik */}
+        <p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.props.showStatistics(this.props.id) : ''}>Wie waren die anderen?</p>
+        </>}/>
+     </div>
+    }
   }
-}
 }
 
 export default Conclusion;

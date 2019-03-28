@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import './transition.css';
+//import './transition.css';
 
 class UserRender extends Component {
   render() {

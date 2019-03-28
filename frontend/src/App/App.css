@@ -1,5 +1,12 @@
-.conclusion {
-  padding:0;
-  margin:0;
-  line-height:1;
+:root {
+  --pink: #dd007A;
+  --blue: #111133;
+  --green: #17A600;
+  --white: #FFFFFF
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
 }
