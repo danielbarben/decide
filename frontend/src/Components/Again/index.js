@@ -4,10 +4,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Userrender from '../Userrender';
-import Botrender from '../Botrender';
-import { TwitterShareButton } from 'react-twitter-embed';
 import Spinner from '../Spinner';
-import Statistics from '../Statistics';
 import api from '../../api.js'
 
 class Conclusion extends Component {
