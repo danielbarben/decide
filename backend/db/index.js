@@ -33,8 +33,11 @@ const Projects = sequelize.define('projects', {
     },
     order: {
         type: Sequelize.INTEGER
+    },
+    status: {
+        type: Sequelize.TEXT
     }
-}//, { force: true }
+}, { force: true }
 )
 
 const Questions = sequelize.define('questions', {

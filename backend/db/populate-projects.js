@@ -8,7 +8,8 @@ db.conn.sync().then(() => {
             bot: project.bot,
             description: project.description,
             autor: project.autor,
-            order: project.order
+            order: project.order,
+            status: project.status
         })
     })
 });

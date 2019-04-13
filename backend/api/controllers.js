@@ -5,8 +5,13 @@ const homeRoute = (req, res) => {
 }
 const landingpage = (req, res) => {
     db.models.Projects
-    .findAll({ order: [['order', 'ASC']]})
+    //.findAll({ order: [['order', 'ASC']]})
+    .findAll({
+        where: {status : 'online'},
+        order: [['order', 'ASC']]
+    })
     .then(projects => {
+        //projects.findAll({ where: [oder != 0]})
         res.status(200).send(projects);
     })
 };
