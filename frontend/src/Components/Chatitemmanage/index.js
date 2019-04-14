@@ -52,8 +52,7 @@ componentDidMount() {
     .then(item => {
       this.setState({
         question: <p>{item.question}</p>,
-        answers: item.answers,
-        //test: item.answers
+        answers: item.answers
       });
     });
   }

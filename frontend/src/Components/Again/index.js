@@ -40,7 +40,8 @@ class Conclusion extends Component {
         {/* Twittern */}
         <p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? window.open(this.state.twitter) : ''}>Ja, Resultat twittern</p>
         {/* Noch einmal */}
-        <p className = {this.state.clickable ? 'button' : ''} onClick = ''><Link to='./'>Nein, noch einmal, bitte!</Link></p>
+        <p className = {this.state.clickable ? 'button' : ''}><Link to='./'>Nein, noch einmal, bitte!</Link></p>
+        {/*<p className = {this.state.clickable ? 'button' : ''} onClick = ''><Link to='./'>Nein, noch einmal, bitte!</Link></p> */}
         {/* Statistik */}
         <p className = {this.state.clickable ? 'button' : ''} onClick = {() => this.state.clickable ? this.props.showStatistics(this.props.id) : ''}>Wie waren die anderen?</p>
         </>}/>
