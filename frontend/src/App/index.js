@@ -22,7 +22,7 @@ class App extends Component {
     this.state = {
       counter: 2,
       project: this.props.match.params.id,
-      bot: '',
+      bot: Sanja,
       itemList: []
     }
   }
@@ -82,7 +82,7 @@ class App extends Component {
     fetch(`${api}/landingpage`)
     .then(res => res.json())
     .then(item => {
-      let tmp = item.find( el => el.id = this.props.match.params.id);
+      let tmp = item.find( el => el.id == this.props.match.params.id);
       this.setState({bot: botPic[tmp.bot]})
     });
     fetch(`${api}/projects/firstquestion/${this.props.match.params.id}`)
