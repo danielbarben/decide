@@ -1,6 +1,6 @@
 module.exports = [{
   projectId: 5,
-  question: "Hallo, ich bin Sanja. Ich sage Dir, was für ein Osterei Du bist. Was bedeutet Dir Ostern?"
+  question: "Hallo, ich bin Sanja. Ich sage Dir, was für ein Osterei Du bist. Beantworte mir dazu ein paar Fragen. Was bedeutet Dir Ostern?"
 },
 {
   projectId: 5,

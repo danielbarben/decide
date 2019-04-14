@@ -37,7 +37,7 @@ const Projects = sequelize.define('projects', {
     status: {
         type: Sequelize.TEXT
     }
-}, { force: true }
+}, //{ force: true }
 )
 
 const Questions = sequelize.define('questions', {

@@ -1,275 +1,275 @@
 module.exports = [{
-    questionId: 1,
+    questionId: 37,
     answer: "Die Auferstehung Jesu Christi.", 
-    nxt:''
+    nxt:'q44'
 },
 {
-    questionId: 1,
+    questionId: 37,
     answer: "Ich freue mich seit Monaten darauf!",
-    nxt:''
+    nxt:'q50'
 },
 {
-  questionId: 1,
+  questionId: 37,
   answer: "Schon wieder Familienschlauch!",
-  nxt:''
+  nxt:'q51'
 },
 {
-  questionId: 1,
+  questionId: 37,
   answer: "Grenzenlose Tierquälerei.",
-  nxt:''
+  nxt:'q39'
 },
 {
-  questionId: 1,
+  questionId: 37,
   answer: "Nichts.",
-  nxt:''
+  nxt:'c27'
 },
 {
-  questionId: 2,
+  questionId: 38,
   answer: "Ja.",
-  nxt:''
+  nxt:'q40'
 },
 {
-  questionId: 2,
+  questionId: 38,
   answer: "Nein.",
-  nxt:''
+  nxt:'q41'
 },
 {
-  questionId: 3,
+  questionId: 39,
   answer: "Nein, natürlich mit den Hühnern.",
-  nxt:''
+  nxt:'q38'
 },
 {
-  questionId: 3,
+  questionId: 39,
   answer: "Den Osterhasen gibt es doch gar nicht!",
-  nxt:''
+  nxt:'q40'
 },
 {
-  questionId: 4,
+  questionId: 40,
   answer: "Ja.",
-  nxt:''
+  nxt:'q42'
 },
 {
-  questionId: 4,
+  questionId: 40,
   answer: "Nein.",
-  nxt:''
+  nxt:'q41'
 },
 {
-  questionId: 5,
+  questionId: 41,
   answer: "Ja.",
-  nxt:''
+  nxt:'c27'
 },
 {
-  questionId: 5,
+  questionId: 41,
   answer: "Nein, aber Massentierhaltung ist unerlässlich.",
-  nxt:''
+  nxt:'c28'
 },
 {
-  questionId: 5,
+  questionId: 41,
   answer: "Ich bin Flexitarier.",
-  nxt:''
+  nxt:'c24'
 },
 {
-  questionId: 6,
+  questionId: 42,
   answer: "Ja, her damit!",
-  nxt:''
+  nxt:'c25'
 },
 {
-  questionId: 6,
+  questionId: 42,
   answer: "Iiih, wäh!",
-  nxt:''
+  nxt:'q43'
 },
 {
-  questionId: 7,
+  questionId: 43,
   answer: "Jawohl!",
-  nxt:''
+  nxt:'c28'
 },
 {
-  questionId: 7,
+  questionId: 43,
   answer: "In meinen Träumen schon.",
-  nxt:''
+  nxt:'c26'
 },
 {
-  questionId: 8,
+  questionId: 44,
   answer: "Zwei Tage nach Karfreitag.",
-  nxt:''
+  nxt:'q48'
 },
 {
-  questionId: 8,
+  questionId: 44,
   answer: "Am Sonntag nach dem ersten Frühlingsvollmond.",
-  nxt:''
+  nxt:'q46'
 },
 {
-  questionId: 8,
+  questionId: 44,
   answer: "Keine Ahnung.",
-  nxt:''
+  nxt:'q45'
 },
 {
-  questionId: 9,
+  questionId: 45,
   answer: "Zwei Tage nach Karfreitag.",
-  nxt:''
+  nxt:'q48'
 },
 {
-  questionId: 9,
+  questionId: 45,
   answer: "Am Sonntag nach dem ersten Frühlingsvollmond.",
-  nxt:''
+  nxt:'q46'
 },
 {
-  questionId: 10,
+  questionId: 46,
   answer: "Ja, protestantisch, muslimisch, jüdisch oder andere.",
-  nxt:''
+  nxt:'q47'
 },{
-  questionId: 10,
+  questionId: 46,
   answer: "Ja, katholisch.",
-  nxt:''
+  nxt:'q49'
 },
 {
-  questionId: 10,
+  questionId: 46,
   answer: "Nein.",
-  nxt:''
+  nxt:'q52'
 },
 {
-  questionId: 11,
+  questionId: 47,
   answer: "Ich bin ein Coop-Kind!",
-  nxt:''
+  nxt:'c29'
 },
 {
-  questionId: 11,
+  questionId: 47,
   answer: "Ich bin ein Migros-Kind!",
-  nxt:''
+  nxt:'c29'
 },
 {
-  questionId: 11,
+  questionId: 47,
   answer: "An Ostern geht es doch mehr um Besinnung als um Konsum!",
-  nxt:''
+  nxt:'c24'
 },
 {
-  questionId: 12,
+  questionId: 48,
   answer: "Immerhin habe ich die Antwort gewusst.",
-  nxt:''
+  nxt:'q46'
 },
 {
-  questionId: 12,
-  answer: "Stell bessere Fragen - nächste Frage!",
-  nxt:''
+  questionId: 48,
+  answer: "Stell einfach bessere Fragen - nächste Frage!",
+  nxt:'q53'
 },
 {
-  questionId: 13,
+  questionId: 49,
   answer: "Certus!",
-  nxt:''
+  nxt:'c28'
 },
 {
-  questionId: 13,
+  questionId: 49,
   answer: "Nein.",
-  nxt:''
+  nxt:'c26'
 },
 {
-  questionId: 14,
+  questionId: 50,
   answer: "Tradition!",
-  nxt:''
+  nxt:'q46'
 },
 {
-  questionId: 14,
+  questionId: 50,
   answer: "Nestli suchen!",
-  nxt:''
+  nxt:'q40'
 },
 {
-  questionId: 14,
+  questionId: 50,
   answer: "Vier Tage frei!",
-  nxt:''
+  nxt:'q54'
 },
 {
-  questionId: 14,
+  questionId: 50,
   answer: "Osterbrunch bei Mama!",
-  nxt:''
+  nxt:'q55'
 },
 {
-  questionId: 15,
+  questionId: 51,
   answer: "Nein.",
-  nxt:''
+  nxt:'q53'
 },
 {
-  questionId: 15,
+  questionId: 51,
   answer: "Doch, nur die Familie nervt.",
-  nxt:''
+  nxt:'q44'
 },
 {
-  questionId: 16,
+  questionId: 52,
   answer: "Zwiebelschalen zum Eierfärben verwenden.",
-  nxt:''
+  nxt:'c24'
 },
 {
-  questionId: 16,
+  questionId: 52,
   answer: "Ein Osterlamm essen.",
-  nxt:''
+  nxt:'q57'
 },
 {
-  questionId: 16,
+  questionId: 52,
   answer: "Ostermärsche!",
-  nxt:''
+  nxt:'q41'
 },
 {
-  questionId: 17,
+  questionId: 53,
   answer: "Mir doch egal.",
-  nxt:''
+  nxt:'c27'
 },
 {
-  questionId: 18,
-  answer: "Ja, ins Tessin!",
-  nxt:''
+  questionId: 54,
+  answer: "Ja, ins Tessin.",
+  nxt:'q56'
 },
 {
-  questionId: 18,
+  questionId: 54,
   answer: "Für vier Tage? Auf keinen Fall!",
-  nxt:''
+  nxt:'q38'
 },
 {
-  questionId: 19,
+  questionId: 55,
   answer: "Ja, mehr ist mehr!",
-  nxt:''
+  nxt:'c26'
 },
 {
-  questionId: 19,
+  questionId: 55,
   answer: "Ja, Mama schaut gut zu mir!",
-  nxt:''
+  nxt:'c25'
 },
 {
-  questionId: 19,
+  questionId: 55,
   answer: "Eigentlich steht mir noch viel mehr zu!",
-  nxt:''
+  nxt:'q53'
 },
 {
-  questionId: 20,
+  questionId: 56,
   answer: "Im Stau? Ich nehme den Zug!",
-  nxt:''
+  nxt:'q38'
 },
 {
-  questionId: 20,
+  questionId: 56,
   answer: "Ich fluche und stelle die Kinder mit Schokolade ruhig.",
-  nxt:''
+  nxt:'c29'
 },
 {
-  questionId: 20,
+  questionId: 56,
   answer: "Meine Eltern fluchen und ich werde mit Schokolade ruhiggestellt.",
-  nxt:''
+  nxt:'c25'
 },
 {
-  questionId: 21,
+  questionId: 57,
   answer: "Im Chesery Gstaad.",
-  nxt:''
+  nxt:'c28'
 },
 {
-  questionId: 21,
+  questionId: 57,
   answer: "Ich bereite das glückliche Bio-Lamm vom lokalen Bio-Hof selber zu.",
-  nxt:''
+  nxt:'c24'
 },
 {
-  questionId: 21,
+  questionId: 57,
   answer: "Ich lasse mich einladen.",
-  nxt:''
+  nxt:'q55'
 },
 {
-  questionId: 21,
+  questionId: 57,
   answer: "Ach, ich esse einen Lamm-Kebab um die Ecke.",
-  nxt:''
-},
+  nxt:'c29'
+}
 ]
