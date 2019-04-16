@@ -12,7 +12,7 @@ class Conclusion extends Component {
     super(props);
     this.state = {
       twitter: '',
-      clickable: true,
+      clickable: true
       //text: '',
       //statistics: false
       //tweetURL: `https://twitter.com/intent/tweet?text=+quote+ By +authorName`
@@ -27,7 +27,7 @@ class Conclusion extends Component {
         url={'https://newsdesign.ch'}
         options={{ text: itemloaded.twittertext + 'Und Du? Probier es aus:'}}
       /></div>})*/
-      this.setState({twitter: `https://twitter.com/intent/tweet?text=+${itemloaded.twittertext}+ Und Du? Finde es heraus: newsdesign.ch`})
+      this.setState({twitter: `https://twitter.com/intent/tweet?text=+${itemloaded.twittertext}`})
       })
       //console.log(this.props.id)
     }

@@ -13,6 +13,7 @@ class Statistics extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      clickable: true,
       text: ''
     }
   }

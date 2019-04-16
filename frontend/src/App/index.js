@@ -56,7 +56,8 @@ class App extends Component {
     
     this.setState({
       itemList: newItem,
-      counter: newCounter
+      counter: newCounter,
+      clickable: false
     })
   }
   
