@@ -58,7 +58,6 @@ class App extends Component {
       itemList: newItem,
       counter: newCounter
     })
-
   }
   
   //Get conclusion
@@ -81,11 +80,12 @@ class App extends Component {
     //fetch first question ID for choosen Project
     fetch(`${api}/landingpage`)
     .then(res => res.json())
-    .then(item => {
-      let tmp = item.find( el => el.id == this.props.match.params.id);
+    .then(item => {      
+      //let tmp = item.find( el => el.id == this.props.match.params.id);
+      let tmp = item.find( el => el.id === Number(this.state.project));
       this.setState({bot: botPic[tmp.bot]})
     });
-    fetch(`${api}/projects/firstquestion/${this.props.match.params.id}`)
+    fetch(`${api}/projects/firstquestion/${this.state.project}`)
     .then(res => res.json())
     .then(item => {
       let firstItem = [];
@@ -96,7 +96,6 @@ class App extends Component {
       })
     })
   }
-
 
   componentDidUpdate() {
     setTimeout(this.scrollToBottom, 1000)
