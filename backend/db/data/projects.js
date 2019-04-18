@@ -38,10 +38,10 @@ module.exports = [{
   id:1,
   name: "Osterei",
   bot: "Sanja",
-  description: "Welches Osterei bist Du?",
-  autor: "Michael Feller",
+  description: "Was war nochmal an Ostern? Hast Du mehr Mitleid mit dem Osterhasen als mit dem Osterlamm? Und: Was machst Du im Osterstau? Ich sage Dir, welcher Typ Osterei Du bist.",
+  autor: "BZ Ressort Kultur",
   order: 1,
-  status: 'offline'
+  status: 'online'
 }
 
 ];
