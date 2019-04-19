@@ -15,8 +15,8 @@
     "express": "^4.16.4",
     "express-subdomain": "^1.0.5",
     "node": "^11.13.0",
-    "pg": "^7.9.0",
-    "sequelize": "^4.43.1",
+    "pg": "^7.10.0",
+    "sequelize": "^4.43.2",
     "sqlite3": "^4.0.6"
   },
   "devDependencies": {
