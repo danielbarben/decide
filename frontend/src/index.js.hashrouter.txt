@@ -1,0 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { HashRouter, BrowserRouter, browserHistory, Route, Switch } from 'react-router-dom';
+import './index.css';
+import Header from './Landingpage/Header.js';
+import Footer from './Landingpage/Footer.js';
+import App from './App';
+import Landingpage from './Landingpage';
+
+ReactDOM.render(
+  //<HashRouter basename='/'>
+  <BrowserRouter >
+  <div>
+    <Header/>
+    <Switch>
+      <Route exact path="/" component = { Landingpage } />
+      <Route exact path="/:id" component = { App } />
+    </Switch>
+    <Footer/>
+    </div>
+  </BrowserRouter>
+  //</HashRouter>
+, document.getElementById('root'));
